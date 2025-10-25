@@ -62,7 +62,7 @@ export default function ReelCard({ item, isLiked, isSaved, onLike, onSave, isAct
 
       {/* Image */}
       <div className="relative flex-1 bg-muted overflow-hidden">
-        <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-full object-cover" />
+        <img src={item.image || "/placeholder.jpg"} alt={item.title} className="w-full h-full object-cover" />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       </div>

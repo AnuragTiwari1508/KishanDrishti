@@ -9,10 +9,10 @@ const feedItems = [
     id: 1,
     author: "Ramesh Kumar",
     location: "Kerala",
-    avatar: "👨‍🌾",
-    image: "/placeholder.svg?key=cvbsg",
+    avatar: "",
+    image: "/wheat-field-healthy.jpg",
     title: "Wheat Harvest Success!",
-    description: "Achieved 45% higher yield this season using AgriTech recommendations",
+    description: "Achieved 45% higher yield this season using Kishan Drishti recommendations",
     likes: 234,
     comments: 45,
     timestamp: "2 hours ago",
@@ -24,8 +24,7 @@ const feedItems = [
     id: 2,
     author: "Ministry of Agriculture",
     location: "National",
-    avatar: "🏛️",
-    image: "/placeholder.svg?key=avbtp",
+    avatar: "", image: "/government-policy-announcement.jpg",
     title: "New Subsidy Policy 2025",
     description: "Direct Benefit Transfer now available for all registered farmers",
     likes: 1200,
@@ -39,8 +38,7 @@ const feedItems = [
     id: 3,
     author: "Priya Sharma",
     location: "Punjab",
-    avatar: "👩‍🌾",
-    image: "/placeholder.svg?key=6tvkf",
+    avatar: "", image: "/pest-detection-alert.jpg",
     title: "Pest Alert - Early Detection",
     description: "AI detected armyworm infestation. Applied recommended treatment",
     likes: 567,
@@ -54,8 +52,7 @@ const feedItems = [
     id: 4,
     author: "Krishi Vigyan Kendra",
     location: "Haryana",
-    avatar: "🏫",
-    image: "/placeholder.svg?key=8jkls",
+    avatar: "", image: "/placeholder.jpg",
     title: "Organic Farming Workshop",
     description: "Free training session on sustainable farming practices",
     likes: 890,
@@ -69,8 +66,8 @@ const feedItems = [
     id: 5,
     author: "Arun Singh",
     location: "Uttar Pradesh",
-    avatar: "👨‍🌾",
-    image: "/placeholder.svg?key=mnopq",
+    avatar: "",
+    image: "/placeholder-user.jpg",
     title: "Market Price Update",
     description: "Wheat prices up 12% - Best time to sell your harvest",
     likes: 445,
@@ -98,24 +95,32 @@ export default function MobileFeed() {
   }
 
   return (
-    <div className="space-y-0 pb-20">
+    <div className="flex flex-col h-full">
       {/* Stories Section */}
-      <StoriesCarousel />
+      <div className="flex-shrink-0">
+        <StoriesCarousel />
+      </div>
 
-      {/* Feed Items */}
-      <div ref={scrollContainerRef} onScroll={handleScroll} className="space-y-0">
+      {/* Feed Section */}
+      <div
+        ref={scrollContainerRef}
+        className="flex-1 overflow-y-auto snap-y snap-mandatory"
+        onScroll={handleScroll}
+      >
         {feedItems.map((item, index) => (
-          <ReelCard
-            key={item.id}
-            item={item}
-            isLiked={liked[item.id] || false}
-            isSaved={saved[item.id] || false}
-            onLike={() => setLiked({ ...liked, [item.id]: !liked[item.id] })}
-            onSave={() => setSaved({ ...saved, [item.id]: !saved[item.id] })}
-            isActive={index === activeIndex}
-          />
+          <div key={item.id} className="snap-start">
+            <ReelCard
+              item={item}
+              isLiked={liked[item.id] || false}
+              isSaved={saved[item.id] || false}
+              onLike={() => setLiked((prev) => ({ ...prev, [item.id]: !prev[item.id] }))}
+              onSave={() => setSaved((prev) => ({ ...prev, [item.id]: !prev[item.id] }))}
+              isActive={index === activeIndex}
+            />
+          </div>
         ))}
       </div>
     </div>
   )
 }
+

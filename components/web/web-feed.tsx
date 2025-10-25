@@ -11,7 +11,7 @@ const feedItems = [
     image: "/wheat-field-healthy.jpg",
     title: "Wheat Harvest Success!",
     description:
-      "Achieved 45% higher yield this season using AgriTech recommendations. The AI-guided crop monitoring helped identify optimal harvest timing.",
+      "Achieved 45% higher yield this season using Kishan Drishti recommendations. The AI-guided crop monitoring helped identify optimal harvest timing.",
     likes: 234,
     comments: 45,
     timestamp: "2 hours ago",
