@@ -125,7 +125,7 @@
   }
 }
 
-/* Added custom animations and utility classes for AgriTech */
+/* Added custom animations and utility classes for Kishan Drishti */
 @layer utilities {
   .mobile-view {
     @apply max-w-md mx-auto;

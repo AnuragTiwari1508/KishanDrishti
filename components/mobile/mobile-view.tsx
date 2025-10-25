@@ -17,7 +17,7 @@ export default function MobileView() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-2xl">🌾</span>
-            <h1 className="text-xl font-bold">AgriTech</h1>
+            <h1 className="text-xl font-bold">Kishan Drishti</h1>
           </div>
           <div className="flex gap-2">
             <button className="p-2 hover:bg-white/20 rounded-full transition">🔔</button>

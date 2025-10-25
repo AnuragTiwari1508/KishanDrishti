@@ -18,7 +18,7 @@ export default function WebSidebar({ activeSection, setActiveSection }: WebSideb
     <div className="w-64 bg-card border-r border-border p-6 sticky top-0 h-screen overflow-y-auto">
       <div className="flex items-center gap-2 mb-8">
         <span className="text-3xl">🌾</span>
-        <h1 className="text-2xl font-bold">AgriTech</h1>
+        <h1 className="text-2xl font-bold">Kishan Drishti</h1>
       </div>
 
       <nav className="space-y-2">
