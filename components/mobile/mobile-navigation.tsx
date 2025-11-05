@@ -8,6 +8,7 @@ interface MobileNavigationProps {
 export default function MobileNavigation({ activeTab, setActiveTab }: MobileNavigationProps) {
   const tabs = [
     { id: "feed", label: "Feed", icon: "📰" },
+    { id: "community", label: "Community", icon: "👥" },
     { id: "upload", label: "Upload", icon: "📸" },
     { id: "reports", label: "Reports", icon: "📊" },
     { id: "wallet", label: "Wallet", icon: "💰" },

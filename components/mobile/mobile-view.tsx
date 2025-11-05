@@ -5,6 +5,7 @@ import MobileFeed from "./mobile-feed"
 import MobileNavigation from "./mobile-navigation"
 import ImageUploadModal from "./image-upload-modal"
 import CropMonitoringDashboard from "./crop-monitoring-dashboard"
+import MobileCommunity from "./mobile-community"
 
 export default function MobileView() {
   const [activeTab, setActiveTab] = useState("feed")
@@ -29,6 +30,7 @@ export default function MobileView() {
       {/* Content */}
       <div className="flex-1 overflow-y-auto">
         {activeTab === "feed" && <MobileFeed />}
+        {activeTab === "community" && <MobileCommunity />}
         {activeTab === "upload" && (
           <div className="p-4">
             <button
