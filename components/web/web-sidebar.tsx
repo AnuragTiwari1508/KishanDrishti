@@ -11,6 +11,7 @@ export default function WebSidebar({ activeSection, setActiveSection }: WebSideb
     { id: "dashboard", label: "Dashboard", icon: "📊" },
     { id: "analytics", label: "Analytics", icon: "📈" },
     { id: "complaints", label: "Complaints", icon: "📝" },
+    { id: "community", label: "Community", icon: "👥" },
     { id: "profile", label: "Profile", icon: "👤" },
   ]
 

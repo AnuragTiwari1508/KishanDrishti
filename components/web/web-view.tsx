@@ -4,6 +4,7 @@ import { useState } from "react"
 import WebSidebar from "./web-sidebar"
 import WebFeed from "./web-feed"
 import WebDashboard from "./web-dashboard"
+import WebCommunity from "./web-community"
 
 export default function WebView() {
   const [activeSection, setActiveSection] = useState("feed")
@@ -19,6 +20,7 @@ export default function WebView() {
         {activeSection === "dashboard" && <WebDashboard />}
         {activeSection === "analytics" && <WebAnalytics />}
         {activeSection === "complaints" && <WebComplaints />}
+        {activeSection === "community" && <WebCommunity />}
         {activeSection === "profile" && <WebProfile />}
       </div>
     </div>
